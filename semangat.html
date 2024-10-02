@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangat untuk Kamu!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="greeting"></h1>
+        <p>bilaa hebat dan pasti bisa melewati ini! Semoga cepat sembuh, farel mendukung bilaa semangat bilaa :)</p>
+        <p>klik tombol di bawah ini yaa ada kejutan</p>
+        <button id="goToFlower">lihat alaman</button>
+    </div>
+
+    <script>
+        // Mengambil nama dari localStorage
+        window.onload = function() {
+            const name = localStorage.getItem('userName');
+            if (name) {
+                document.getElementById('greeting').textContent = `Tetap Semangat, ${name}!`;
+            } else {
+                document.getElementById('greeting').textContent = `Tetap Semangat!`; // Jika nama tidak ditemukan
+            }
+        }
+    
+        // Menambahkan event listener untuk tombol
+        document.getElementById('goToFlower').addEventListener('click', function() {
+            window.location.href = 'flower.html'; // Mengarahkan ke halaman flower.html
+        });
+    </script>
+    
+</body>
+</html>
